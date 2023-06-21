@@ -15,6 +15,7 @@
 - [run cat](https://apps.apple.com/cn/app/runcat/id1429033973?mt=12)
 - [yabai 窗口编排](https://github.com/koekeishiya/yabai)
 - [CheatSheet 长按 Command 键就可以显示所有的快捷键，也可以直接点击调用](https://www.mediaatelier.com/CheatSheet/)
+- [配色主题](https://draculatheme.com/)
 
 ### 开发
 
@@ -27,6 +28,7 @@
 - [zplug 使用](https://www.jkg.tw/p2965/)
 - [命令历史记录](https://github.com/ellie/atuin)
 - [podman 比docker消耗资源少](https://podman.io/)
+- [lsd 功能强大的ls](https://github.com/lsd-rs/lsd)
 
 #### ohmyzsh 插件
 
