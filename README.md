@@ -9,10 +9,12 @@
 - [Homebrew 安装软件](https://brew.sh)
 - [alfred 搜索和集成](https://www.alfredapp.com/)
 - [numi 计算器](https://github.com/nikolaeu/numi/wiki)
-- [QBlocker 防止误触退出](https://github.com/steve228uk/QBlocker)
 - [Microsoft Remote Desktop Beta 远程连接Windows](https://install.appcenter.ms/orgs/rdmacios-k2vy/apps/microsoft-remote-desktop-for-mac/distribution_groups/all-users-of-microsoft-remote-desktop-for-mac)
-- [app-cleaner 清理软件](https://nektony.com/mac-app-cleaner)
 - [draw.io 画图软件](https://app.diagrams.net/)
+- [CleanMyMac X](https://cleanmymac.com/)
+- [run cat](https://apps.apple.com/cn/app/runcat/id1429033973?mt=12)
+- [yabai 窗口编排](https://github.com/koekeishiya/yabai)
+- [CheatSheet 长按 Command 键就可以显示所有的快捷键，也可以直接点击调用](https://www.mediaatelier.com/CheatSheet/)
 
 ### 开发
 
@@ -21,16 +23,27 @@
 - [AppleScript文档 可以操作app的脚本语言](https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html)
 - [idea toolbox](https://www.jetbrains.com/toolbox-app/)
 - [oh my zsh zsh的工具](https://ohmyz.sh/)
+- [zplug zsh 插件管理](https://github.com/zplug/zplug)
+- [zplug 使用](https://www.jkg.tw/p2965/)
+- [命令历史记录](https://github.com/ellie/atuin)
+- [podman 比docker消耗资源少](https://podman.io/)
 
 #### ohmyzsh 插件
 
 [插件集合](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
 
-- extract 解压缩 `x a.zip`
-- z 跳转目录 `z code`
-- [zsh-syntax-highlighting 语法高亮](https://github.com/zsh-users/zsh-syntax-highlighting)
-- [zsh-autosuggestions 自动补全](https://github.com/zsh-users/zsh-autosuggestions)
-- vscode `vsc a.java` `vsc code`
+```shell
+# zplug plugins
+zplug "romkatv/powerlevel10k", as:theme, depth:1
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/extract", from:oh-my-zsh
+zplug "plugins/vscode", from:oh-my-zsh
+zplug "plugins/dirhistory", from:oh-my-zsh
+zplug "plugins/z", from:oh-my-zsh
+zplug "plugins/sudo", from:oh-my-zsh
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-autosuggestions"
+```
 
 #### ohmyzsh 主题
 
@@ -110,4 +123,4 @@ launchctl stop com.example.app
 ```
 
 ## homebrew
-
+安装和管理软件，神器！！
