@@ -30,6 +30,10 @@
 - [podman 比docker消耗资源少](https://podman.io/)
 - [lsd 功能强大的ls](https://github.com/lsd-rs/lsd)
 
+##### vim
+
+- [插件管理](https://github.com/VundleVim/Vundle.vim)
+
 #### ohmyzsh 插件
 
 [插件集合](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
@@ -66,6 +70,14 @@ open /tmp
 open -a WeChat
 # 打开app和参数
 open -a LibreOffice 日常函件浏览器指标10.10\(1\).xlsx
+```
+- 剪切板
+
+```shell
+# 保存到剪切板
+base64 info.png | pbcopy
+# 输出剪切板
+pbpaste | base64 -d > info.png
 ```
 
 - finder 打开 terminal 使用 AppleScript
