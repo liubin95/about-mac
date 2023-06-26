@@ -33,6 +33,7 @@
 ##### vim
 
 - [插件管理](https://github.com/VundleVim/Vundle.vim)
+- [插件搜索](https://vimawesome.com)
 
 #### ohmyzsh 插件
 
