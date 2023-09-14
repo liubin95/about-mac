@@ -29,6 +29,7 @@
 - [命令历史记录](https://github.com/ellie/atuin)
 - [podman 比docker消耗资源少](https://podman.io/)
 - [lsd 功能强大的ls](https://github.com/lsd-rs/lsd)
+- [绘制多个主机的 ping 时间图,通过标志绘制命令的执行时间--cmd](https://github.com/orf/gping)
 
 ##### vim
 
