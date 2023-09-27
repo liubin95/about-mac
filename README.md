@@ -12,7 +12,8 @@
 - [Microsoft Remote Desktop Beta 远程连接Windows](https://install.appcenter.ms/orgs/rdmacios-k2vy/apps/microsoft-remote-desktop-for-mac/distribution_groups/all-users-of-microsoft-remote-desktop-for-mac)
 - [draw.io 画图软件](https://app.diagrams.net/)
 - [CleanMyMac X](https://cleanmymac.com/)
-- [run cat](https://apps.apple.com/cn/app/runcat/id1429033973?mt=12)
+- ~~[run cat](https://apps.apple.com/cn/app/runcat/id1429033973?mt=12)~~
+- dockx 
 - [yabai 窗口编排](https://github.com/koekeishiya/yabai)
 - [CheatSheet 长按 Command 键就可以显示所有的快捷键，也可以直接点击调用](https://www.mediaatelier.com/CheatSheet/)
 - [配色主题](https://draculatheme.com/)
