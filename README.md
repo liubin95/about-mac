@@ -13,10 +13,11 @@
 - [draw.io 画图软件](https://app.diagrams.net/)
 - [CleanMyMac X](https://cleanmymac.com/)
 - ~~[run cat](https://apps.apple.com/cn/app/runcat/id1429033973?mt=12)~~
-- dockx 
+- dockx
 - [yabai 窗口编排](https://github.com/koekeishiya/yabai)
 - [CheatSheet 长按 Command 键就可以显示所有的快捷键，也可以直接点击调用](https://www.mediaatelier.com/CheatSheet/)
 - [配色主题](https://draculatheme.com/)
+- [自动切换输入法](https://github.com/itsuhane/SwitchKey)
 
 ### 开发
 
@@ -74,6 +75,7 @@ open -a WeChat
 # 打开app和参数
 open -a LibreOffice 日常函件浏览器指标10.10\(1\).xlsx
 ```
+
 - 剪切板
 
 ```shell
@@ -87,16 +89,16 @@ pbpaste | base64 -d > info.png
 
 ```osascript
 tell application "Finder"
-	set dir_path to quoted form of (POSIX path of (folder of the front window as alias))
+ set dir_path to quoted form of (POSIX path of (folder of the front window as alias))
 end tell
 CD_to(dir_path)
 on CD_to(theDir)
-	tell application "iTerm"
-		activate
-		set win to (create window with default profile)
-		set sesh to (current session of win)
-		tell sesh to write text "cd " & theDir & ";clear"
-	end tell
+ tell application "iTerm"
+  activate
+  set win to (create window with default profile)
+  set sesh to (current session of win)
+  tell sesh to write text "cd " & theDir & ";clear"
+ end tell
 end CD_to
 ```
 
@@ -140,4 +142,5 @@ launchctl stop com.example.app
 ```
 
 ## homebrew
+
 安装和管理软件，神器！！
