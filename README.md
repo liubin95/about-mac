@@ -33,6 +33,7 @@
 - [lsd 功能强大的ls](https://github.com/lsd-rs/lsd)
 - [绘制多个主机的 ping 时间图,通过标志绘制命令的执行时间--cmd](https://github.com/orf/gping)
 - [proxyman mac平台抓包软件](https://proxyman.io/)
+- [替换curl的http cli 工具](https://github.com/httpie/cli)
 
 ##### vim
 
