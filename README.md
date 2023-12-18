@@ -34,6 +34,7 @@
 - [绘制多个主机的 ping 时间图,通过标志绘制命令的执行时间--cmd](https://github.com/orf/gping)
 - [proxyman mac平台抓包软件](https://proxyman.io/)
 - [替换curl的http cli 工具](https://github.com/httpie/cli)
+- [mac 上的命令行](https://git.herrbischoff.com/awesome-macos-command-line/about/)
 
 ##### vim
 
@@ -62,6 +63,21 @@ zplug "zsh-users/zsh-autosuggestions"
 - [p10k](https://github.com/romkatv/powerlevel10k)
 
 ## 操作
+
+### WI-FI
+
+```shell
+# 打开 WI-FI
+networksetup -setairportpower en0 on
+# Create a symbolic link to the airport command for easy access:
+sudo ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
+# 扫描 WiFi
+airport -s
+# 加入 WI-FI
+networksetup -setairportnetwork en0 WIFI_SSID WIFI_PASSWORD
+
+```
+
 
 ### Finder and Terminal
 
