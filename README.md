@@ -9,7 +9,7 @@
 - [Homebrew 安装软件](https://brew.sh)
 - [alfred 搜索和集成](https://www.alfredapp.com/)
 - [numi 计算器](https://github.com/nikolaeu/numi/wiki)
-- [Microsoft Remote Desktop Beta 远程连接Windows](https://install.appcenter.ms/orgs/rdmacios-k2vy/apps/microsoft-remote-desktop-for-mac/distribution_groups/all-users-of-microsoft-remote-desktop-for-mac)
+- [Microsoft Remote Desktop 远程连接Windows](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac)
 - [draw.io 画图软件](https://app.diagrams.net/)
 - [CleanMyMac X](https://cleanmymac.com/)
 - ~~[run cat](https://apps.apple.com/cn/app/runcat/id1429033973?mt=12)~~
