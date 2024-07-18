@@ -5,39 +5,20 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# antidote start
 
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
+# Source zstyles you might use with antidote.
+[[ -e ${HOME}/.zstyles ]] && source ${HOME}/.zstyles
 
-# zplug plugins
-zplug romkatv/powerlevel10k, as:theme, depth:1
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/extract", from:oh-my-zsh
-zplug "plugins/vscode", from:oh-my-zsh
-#zplug "plugins/dirhistory", from:oh-my-zsh
-zplug "plugins/z", from:oh-my-zsh
-zplug "plugins/sudo", from:oh-my-zsh
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "zsh-users/zsh-autosuggestions"
+source $HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh
+antidote load ${HOME}/.zsh_plugins.txt
 
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
+autoload -Uz compinit && compinit
 
-# Then, source plugins and add commands to $PATH
-zplug load
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+# antidote end
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -54,30 +35,113 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
+# where proxy
+export PROXY_PORT=7890
+proxy () {
+  export https_proxy=http://127.0.0.1:$PROXY_PORT
+  export http_proxy=http://127.0.0.1:$PROXY_PORT
+  export all_proxy=socks5://127.0.0.1:$PROXY_PORT
+  git config --global http.proxy http://127.0.0.1:$PROXY_PORT
+  git config --global https.proxy https://127.0.0.1:$PROXY_PORT
+  if [ "$1" != "silent" ]; then
+    echo "All Proxy on"
+  fi
+}
+# auto proxy
+nc -z localhost $PROXY_PORT > /dev/null 2>&1 && proxy silent
+
+# where noproxy
+unproxy () {
+  unset https_proxy
+  unset http_proxy
+  unset all_proxy
+  git config --global --unset http.proxy
+  git config --global --unset https.proxy
+  echo "All Proxy off"
+}
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-export NODE_OPTIONS='--max_old_space_size=10240'
-# hummus 的编译需要设置这个环境变量
+
+# hummus 的编译需要设置这个环境变量 [op]
 export EXTRA_NODE_PRE_GYP_FLAGS=""
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ll='lsd -l'
-alias lla='lsd -al'
-alias yst='yarn start'
-alias upzsh='source ~/.zshrc'
+alias ll="lsd -l"
+alias lla="lsd -al"
 
-# nvm start
+alias zshconfig="code ~/.zshrc"
+alias zshup="source ~/.zshrc"
+
+#cman start
+alias cman='man -M /usr/local/share/man/zh_CN'
+#cman end
+
+#watch start
+# 通过将 watch 本身别名为 alias watchh='watch ' （带有尾随空格）
+# 然后使用 watchh k ，可以强制当前交互式 shell 展开 k 在传递给 watch 之前。
+alias watchh='watch '
+#watch end
+
+# nvm start [op]
 export NVM_DIR="$HOME/.nvm"
-    [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
-    [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 # nvm end
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-eval "$(atuin init zsh)"
+
+# atuin
+command -v atuin >/dev/null && eval "$(atuin init zsh)"
+
+# pyenv start
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+command -v pyenv >/dev/null && eval "$(pyenv init -)"
+# pyenv end
+
+# android start [op]
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+# android end
+
+# ruby start [op]
+export RUBY_BUILD_MIRROR_URL=https://cache.ruby-china.com
+eval "$(rbenv init - zsh)"
+# ruby end
+
+# docker config start
+export BUILDKIT_PROGRESS=plain
+# docker config end
+
+# k8s config start
+export KUBECONFIG=~/.kube/admin.conf.yaml
+alias k='kubectl'
+# completion
+command -v kubectl >/dev/null && source <(kubectl completion zsh)
+command -v flux >/dev/null && source <(flux completion zsh)
+# k8s config end
+
+# >>> conda initialize >>> [op]
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<

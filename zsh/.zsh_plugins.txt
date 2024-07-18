@@ -1,0 +1,113 @@
+#
+# .zsh_plugins.txt - 解毒剂插件文件
+#
+
+### 概览
+#
+# antidote 使用 `.zsh_plugins.txt` 文件来配置 Zsh 捆绑程序。捆绑包
+# 只是 Zsh 实用程序、框架、提示或插件的一种别致的指代方式。
+# antidote 使用 `.zsh_plugins.txt` 生成静态的 `.zsh_plugins.zsh` 文件、
+# 该文件可以在你的 `.zshrc`中使用。您可以将此文件作为
+# 作为你自己配置的起点。删除指导性注释（即：以 “#”开头的行）
+# 以及任何你不需要的插件，然后添加你喜欢的内容，使其成为你的配置！
+#
+# 注意：此文件中的顺序很重要！有些捆绑包需要放在最后，有些则是
+# 先决条件。请阅读您使用的插件的文档，以确保配置正确。
+# 配置。
+#
+###
+
+### 常规插件
+#
+# 插件是最简单的捆绑包。你可以指向一个完整的 git URL，或者如果你
+# 假设是 GitHub.com，则可以使用用户/repo 速记。
+#
+###
+romkatv/powerlevel10k
+
+### 本地插件
+#
+# 插件不一定要来自 GitHub。你也可以使用本地文件或目录来
+# 承载你自己的自定义插件。
+#
+###
+$HOME/.oh-my-zsh/custom/plugins/ksw
+
+### 提示
+#
+# 您可以使用
+# `kind:fpath` 注解。在该命令
+# 运行：
+#
+# autoload -Uz promptinit && promptinit
+# prompt ${prompt_name:-pure} # autoload -Uz promptinit && promptinit
+#
+# 有两种加载提示的方法。
+# 使用 `kind:fpath` 将多个提示插件添加到您的 `$fpath` 中，稍后在
+# 运行 Zsh 内置的 `prompt` 来选择主题。
+# - 或者，像普通插件一样只加载一个提示。
+#
+###
+
+
+### 框架
+#
+# 框架是 Zsh 功能、设置和插件的集合，旨在简化
+# Zsh 配置。不幸的是，所有这些功能都有严重的缺点。
+# 框架通常会设置比你需要的更多的设置或别名，使你的 Zsh
+# 配置，并减慢运行速度。请谨慎使用！
+#
+# 框架在 antidote 中使用 `path:location/of/plugin` 注解来处理。
+#
+###
+
+
+#### 框架： Oh-My-Zsh
+#
+# Oh-My-Zsh 是一个非常流行的 Zsh 框架。你可以选择在自己的配置中使用 OMZ
+# 中的插件。根据你使用的插件，你可能还需要包含
+# OMZ 的整个 “lib ”目录。如果这样做，请务必小心--“lib ”配置了很多
+# 非常广泛的设置。如果你熟悉你正在做的事情，你可以选择
+# 只包含 “lib ”的部分内容。
+#
+# 使用全部 lib
+# ohmyzsh/ohmyzsh path:lib
+# 或者，只使用我们关心的特定文件
+# ohmyzsh/ohmyzsh path:lib/clipboard.zsh
+#
+####
+getantidote/use-omz
+ohmyzsh/ohmyzsh path:lib/clipboard.zsh
+ohmyzsh/ohmyzsh path:plugins/vscode
+ohmyzsh/ohmyzsh path:plugins/dirhistory
+ohmyzsh/ohmyzsh path:plugins/z
+
+### 推迟的插件
+#
+# Antidote 允许您延迟加载插件。这与其他插件管理器中的 "turbo
+# 模式 "等概念。Antidote 通过利用
+# romkatv/zsh-defer，它可以 "推迟 zsh 命令的执行，直到 zsh 没有其他工作可做，并等待用户执行
+# 等待用户输入"。一般来说，除非
+# 您可以确定它们正确支持延迟加载，并且不会产生不利的
+# 副作用（参见：https://github.com/romkatv/zsh-defer#Caveats）。不过，对于
+# 某些插件，这可以大大提高 zsh 的启动速度。
+#
+###
+
+zdharma-continuum/fast-syntax-highlighting kind:defer
+zsh-users/zsh-autosuggestions kind:defer
+
+### 完成
+#
+# 您可能想向 Zsh 添加一些额外的补全。完成会在你的 fpath 中查找
+# 用于补全函数，即以下划线开头的函数
+#（例如：_git）。您需要先将所有补充补全添加到您的 fpath 中
+# 运行 `compinit` 来正确使用补全功能。你会想要找到
+# 一个为你运行 `compinit` 的完成插件，或者你可以自己运行它
+# 解毒剂加载后的 .zshrc 如下所示：
+#
+# 自动加载 -Uz compinit && compinit
+#
+###
+# todo kind:fpath
+$HOME/.oh-my-zsh/custom/completions/_ksw

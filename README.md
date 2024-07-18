@@ -14,7 +14,8 @@
 - [CleanMyMac X](https://cleanmymac.com/)
 - ~~[run cat](https://apps.apple.com/cn/app/runcat/id1429033973?mt=12)~~
 - dockx
-- [yabai 窗口编排](https://github.com/koekeishiya/yabai)
+- ~~[yabai 窗口编排](https://github.com/koekeishiya/yabai)~~
+- loop 窗口编排
 - [CheatSheet 长按 Command 键就可以显示所有的快捷键，也可以直接点击调用](https://www.mediaatelier.com/CheatSheet/)
 - [配色主题](https://draculatheme.com/)
 - [自动切换输入法](https://github.com/itsuhane/SwitchKey)
@@ -26,9 +27,10 @@
 - ~~[AppleScript文档 可以操作app的脚本语言](https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html)~~
 - [idea toolbox](https://www.jetbrains.com/toolbox-app/)
 - [oh my zsh zsh的工具](https://ohmyz.sh/)
-- [zplug zsh 插件管理](https://github.com/zplug/zplug)
-- [zplug 使用](https://www.jkg.tw/p2965/)
-- [命令历史记录](https://github.com/ellie/atuin)
+- ~~[zplug zsh 插件管理](https://github.com/zplug/zplug)~~
+- ~~[zplug 使用](https://www.jkg.tw/p2965/)~~
+- [zsh插件管理 antidote](https://github.com/mattmc3/antidote)
+- [命令历史记录 atuin](https://github.com/ellie/atuin)
 - [podman 比docker消耗资源少](https://podman.io/)
 - [lsd 功能强大的ls](https://github.com/lsd-rs/lsd)
 - [绘制多个主机的 ping 时间图,通过标志绘制命令的执行时间--cmd](https://github.com/orf/gping)
@@ -36,31 +38,14 @@
 - [替换curl的http cli 工具](https://github.com/httpie/cli)
 - [mac 上的命令行](https://git.herrbischoff.com/awesome-macos-command-line/about/)
 
-##### vim
+#### vim
 
 - [插件管理](https://github.com/VundleVim/Vundle.vim)
 - [插件搜索](https://vimawesome.com)
 
-#### ohmyzsh 插件
+#### zsh
 
-[插件集合](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
-
-```shell
-# zplug plugins
-zplug "romkatv/powerlevel10k", as:theme, depth:1
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/extract", from:oh-my-zsh
-zplug "plugins/vscode", from:oh-my-zsh
-zplug "plugins/dirhistory", from:oh-my-zsh
-zplug "plugins/z", from:oh-my-zsh
-zplug "plugins/sudo", from:oh-my-zsh
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "zsh-users/zsh-autosuggestions"
-```
-
-#### ohmyzsh 主题
-
-- [p10k](https://github.com/romkatv/powerlevel10k)
+- [插件集合](https://github.com/unixorn/awesome-zsh-plugins)
 
 ## 操作
 
@@ -77,7 +62,6 @@ airport -s
 networksetup -setairportnetwork en0 WIFI_SSID WIFI_PASSWORD
 
 ```
-
 
 ### Finder and Terminal
 
