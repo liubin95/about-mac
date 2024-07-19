@@ -101,7 +101,7 @@ db_path = "~/.history.db"
 history_filter = [
     "^cd",
     "^code",
-    "^ll",
+    "^ll$",
 ]
 
 ## 防止写入与任何这些正则表达式匹配的 cwd 运行的命令
@@ -169,12 +169,14 @@ common_subcommands = [
     "kubectl",
     "systemctl",
     "yarn",
+    "k"
 ]
 
 ## Set commands that should be totally stripped and ignored from stats
 # common_prefix = ["sudo"]
 
 ## 设置从统计数据中完全忽略的命令
+# atuin stats
 ignored_commands = [
     "cd",
     "ll",
