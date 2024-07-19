@@ -66,8 +66,13 @@ export EXTRA_NODE_PRE_GYP_FLAGS=""
 #
 # Example aliases
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# >>> lsd start 2024年7月19日 >>> [op]
 alias ll="lsd -l"
 alias lla="lsd -al"
+alias lt='lsd --tree'
+alias lt2='lsd --tree --depth 2'
+# <<< lsd end <<<
 
 alias zshconfig="code ~/.zshrc"
 alias zshup="source ~/.zshrc"

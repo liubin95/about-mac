@@ -33,6 +33,7 @@ mattmc3/zsh-safe-rm
 #
 ###
 $HOME/custom/plugins/ksw
+$HOME/custom/plugins/tt
 
 ### Prompts
 #
@@ -97,17 +98,18 @@ zsh-users/zsh-autosuggestions kind:defer
 
 ### Completions
 #
-# 您可能想向 Zsh 添加一些额外的补全。完成会在你的 fpath 中查找
-# 用于补全函数，即以下划线开头的函数
-#（例如：_git）。您需要先将所有补充补全添加到您的 fpath 中
-# 运行 `compinit` 来正确使用补全功能。你会想要找到
-# 一个为你运行 `compinit` 的完成插件，或者你可以自己运行它
-# 解毒剂加载后的 .zshrc 如下所示：
+# You may want to add some additional completions to Zsh. Completions look in your fpath
+# for completion functions, which are functions named with a leading underscore
+# (eg: _git). You need to add all supplemental completions to your fpath prior to
+# running `compinit` to use completions functionality properly. You will want to find
+# a completion plugin that runs `compinit` for you, or you can run it yourself in
+# your .zshrc after antidote loads like this:
 #
-# autoload -Uz compinit && compinit
+#   autoload -Uz compinit && compinit
 #
 ###
 
 $HOME/custom/completions/_ksw
 $HOME/custom/completions/_docker
+$HOME/custom/completions/_tc
 zsh-users/zsh-completions path:src kind:fpath
