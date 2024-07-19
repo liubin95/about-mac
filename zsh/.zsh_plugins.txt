@@ -1,5 +1,5 @@
 #
-# .zsh_plugins.txt - 解毒剂插件文件
+# .zsh_plugins.txt - https://github.com/getantidote/zdotdir
 #
 
 ### 概览
@@ -24,6 +24,7 @@
 #
 ###
 romkatv/powerlevel10k
+mattmc3/zsh-safe-rm
 
 ### 本地插件
 #
@@ -31,20 +32,17 @@ romkatv/powerlevel10k
 # 承载你自己的自定义插件。
 #
 ###
-$HOME/.oh-my-zsh/custom/plugins/ksw
+$HOME/custom/plugins/ksw
 
-### 提示
+### Prompts
 #
-# 您可以使用
-# `kind:fpath` 注解。在该命令
-# 运行：
+# 您可以使用 `kind:fpath` 注解。在该命令 运行：
 #
 # autoload -Uz promptinit && promptinit
 # prompt ${prompt_name:-pure} # autoload -Uz promptinit && promptinit
 #
 # 有两种加载提示的方法。
-# 使用 `kind:fpath` 将多个提示插件添加到您的 `$fpath` 中，稍后在
-# 运行 Zsh 内置的 `prompt` 来选择主题。
+# - 使用 `kind:fpath` 将多个提示插件添加到您的 `$fpath` 中，稍后在运行 Zsh 内置的 `prompt` 来选择主题。
 # - 或者，像普通插件一样只加载一个提示。
 #
 ###
@@ -78,9 +76,9 @@ $HOME/.oh-my-zsh/custom/plugins/ksw
 ####
 getantidote/use-omz
 ohmyzsh/ohmyzsh path:lib/clipboard.zsh
-ohmyzsh/ohmyzsh path:plugins/vscode
 ohmyzsh/ohmyzsh path:plugins/dirhistory
 ohmyzsh/ohmyzsh path:plugins/z
+ohmyzsh/ohmyzsh path:plugins/nvm kind:defer
 
 ### 推迟的插件
 #
@@ -97,7 +95,7 @@ ohmyzsh/ohmyzsh path:plugins/z
 zdharma-continuum/fast-syntax-highlighting kind:defer
 zsh-users/zsh-autosuggestions kind:defer
 
-### 完成
+### Completions
 #
 # 您可能想向 Zsh 添加一些额外的补全。完成会在你的 fpath 中查找
 # 用于补全函数，即以下划线开头的函数
@@ -106,8 +104,10 @@ zsh-users/zsh-autosuggestions kind:defer
 # 一个为你运行 `compinit` 的完成插件，或者你可以自己运行它
 # 解毒剂加载后的 .zshrc 如下所示：
 #
-# 自动加载 -Uz compinit && compinit
+# autoload -Uz compinit && compinit
 #
 ###
-# todo kind:fpath
-$HOME/.oh-my-zsh/custom/completions/_ksw
+
+$HOME/custom/completions/_ksw
+$HOME/custom/completions/_docker
+zsh-users/zsh-completions path:src kind:fpath

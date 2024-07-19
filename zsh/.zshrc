@@ -1,3 +1,5 @@
+# 统计zshrc加载时间
+# zmodload zsh/zprof
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -5,21 +7,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# antidote start
-
+# >>> antidote start 2024年7月19日 >>> [op]
 # Source zstyles you might use with antidote.
 [[ -e ${HOME}/.zstyles ]] && source ${HOME}/.zstyles
-
+# load antidote
 source $HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh
 antidote load ${HOME}/.zsh_plugins.txt
-
+# Enable completion.
 autoload -Uz compinit && compinit
-
-# antidote end
-
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
+# <<< antidote end <<<
 
 # User configuration
 
@@ -60,9 +56,6 @@ unproxy () {
   echo "All Proxy off"
 }
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # hummus 的编译需要设置这个环境变量 [op]
 export EXTRA_NODE_PRE_GYP_FLAGS=""
 
@@ -90,9 +83,8 @@ alias watchh='watch '
 #watch end
 
 # nvm start [op]
+# 移动到zsh_plugins.txt 使用 kind:defer
 export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 # nvm end
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -116,7 +108,7 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
 # ruby start [op]
 export RUBY_BUILD_MIRROR_URL=https://cache.ruby-china.com
-eval "$(rbenv init - zsh)"
+command -v rbenv >/dev/null && eval "$(rbenv init - zsh)"
 # ruby end
 
 # docker config start
@@ -145,3 +137,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# 统计zshrc加载时间
+# zprof
