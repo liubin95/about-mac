@@ -121,7 +121,6 @@ export BUILDKIT_PROGRESS=plain
 # docker config end
 
 # k8s config start
-export KUBECONFIG=~/.kube/admin.conf.yaml
 alias k='kubectl'
 # completion
 command -v kubectl >/dev/null && source <(kubectl completion zsh)

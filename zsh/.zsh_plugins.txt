@@ -34,6 +34,7 @@ mattmc3/zsh-safe-rm
 ###
 $HOME/custom/plugins/ksw
 $HOME/custom/plugins/tt
+$HOME/custom/plugins/bak
 
 ### Prompts
 #
