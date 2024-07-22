@@ -102,6 +102,7 @@ history_filter = [
     "^cd",
     "^code",
     "^ll$",
+    "^yy$"
 ]
 
 ## 防止写入与任何这些正则表达式匹配的 cwd 运行的命令
@@ -180,7 +181,8 @@ common_subcommands = [
 ignored_commands = [
     "cd",
     "ll",
-    "code"
+    "code",
+    "yy"
 ]
 
 [keys]

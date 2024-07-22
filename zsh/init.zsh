@@ -23,6 +23,5 @@ ln -s ~/code/about-mac/zsh/.zshrc ~/.zshrc
 ln -s ~/code/about-mac/zsh/.p10k.zsh ~/.p10k.zsh
 ln -s ~/code/about-mac/zsh/.zsh_plugins.txt ~/.zsh_plugins.txt
 ln -s ~/code/about-mac/zsh/.vimrc ~/.vimrc
-
-cat ~/code/about-mac/zsh/atuin.toml > ~/.config/atuin/config.toml
-cat ~/code/about-mac/zsh/lsd-config.yaml > ~/.config/lsd/config.yaml
+ln -s ~/code/about-mac/zsh/atuin.toml ~/.config/atuin/config.toml
+ln -s ~/code/about-mac/zsh/lsd.yaml ~/.config/lsd/config.yaml

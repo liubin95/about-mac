@@ -18,6 +18,7 @@ autoload -Uz compinit && compinit
 # <<< antidote end <<<
 
 # User configuration
+export XDG_STATE_HOME=$HOME/.config/state
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
