@@ -4,39 +4,40 @@
 
 ### 常用
 
-- [Snipaste 截图软件](https://www.snipaste.com/)
-- [Logitech Options 罗技客户端](https://www.logitech.com.cn/zh-cn/software/options.html)
 - [Homebrew 安装软件](https://brew.sh)
 - [alfred 搜索和集成](https://www.alfredapp.com/)
-- [numi 计算器](https://github.com/nikolaeu/numi/wiki)
-- [Microsoft Remote Desktop 远程连接Windows](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac)
-- [draw.io 画图软件](https://app.diagrams.net/)
 - [CleanMyMac X](https://cleanmymac.com/)
+- [Snipaste 截图软件](https://www.snipaste.com/)
+- [自动切换输入法](https://github.com/itsuhane/SwitchKey)
+- [Microsoft Remote Desktop 远程连接Windows](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac) 
+- [Logitech Options 罗技客户端](https://www.logitech.com.cn/zh-cn/software/options.html)
+- [numi 计算器](https://github.com/nikolaeu/numi/wiki)
+- [draw.io 画图软件](https://app.diagrams.net/)
 - ~~[run cat](https://apps.apple.com/cn/app/runcat/id1429033973?mt=12)~~
 - dockx
 - ~~[yabai 窗口编排](https://github.com/koekeishiya/yabai)~~
 - loop 窗口编排
 - [CheatSheet 长按 Command 键就可以显示所有的快捷键，也可以直接点击调用](https://www.mediaatelier.com/CheatSheet/)
 - [配色主题](https://draculatheme.com/)
-- [自动切换输入法](https://github.com/itsuhane/SwitchKey)
 
 ### 开发
 
 - ~~[mac的系统服务管理](https://www.launchd.info/)~~
 - [iterm2 终端](https://iterm2.com/)
-- ~~[AppleScript文档 可以操作app的脚本语言](https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html)~~
 - [idea toolbox](https://www.jetbrains.com/toolbox-app/)
-- [oh my zsh zsh的工具](https://ohmyz.sh/)
+- ~~[oh my zsh zsh的工具](https://ohmyz.sh/)~~
 - ~~[zplug zsh 插件管理](https://github.com/zplug/zplug)~~
 - ~~[zplug 使用](https://www.jkg.tw/p2965/)~~
 - [zsh插件管理 antidote](https://github.com/mattmc3/antidote)
 - [命令历史记录 atuin](https://github.com/ellie/atuin)
-- [podman 比docker消耗资源少](https://podman.io/)
+- todo [podman 比docker消耗资源少](https://podman.io/)
 - [lsd 功能强大的ls](https://github.com/lsd-rs/lsd)
 - [绘制多个主机的 ping 时间图,通过标志绘制命令的执行时间--cmd](https://github.com/orf/gping)
 - [proxyman mac平台抓包软件](https://proxyman.io/)
 - [替换curl的http cli 工具](https://github.com/httpie/cli)
 - [mac 上的命令行](https://git.herrbischoff.com/awesome-macos-command-line/about/)
+- [k9s k8s的命令行工具](https://k9scli.io/)
+- [tailspin 日志查看工具](https://github.com/bensadeh/tailspin)
 
 #### vim
 

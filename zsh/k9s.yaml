@@ -1,0 +1,25 @@
+# todo 无效 $XDG_CONFIG_HOME/k9s/views.yaml
+views:
+  v1/node:
+    columns:
+    - NAME
+    - INTERNAL-IP
+    - STATUS
+    - VERSION
+    - PODS
+    - CPU
+    - MEM
+  # alters the pod view column layout
+  v1/pod:
+    sortColumn: NAME:desc
+    columns:
+    - NAMESPACE
+    - NAME
+    - STATUS
+    - READY
+    - RESTARTS
+    - CPU
+    - MEM
+    - IP
+    - NODE
+    - AGE

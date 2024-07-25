@@ -19,7 +19,7 @@ autoload -Uz compinit && compinit
 
 # User configuration
 export XDG_STATE_HOME=$HOME/.config/state
-
+export XDG_CONFIG_HOME=$HOME/.config
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
