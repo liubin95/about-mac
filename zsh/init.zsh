@@ -29,4 +29,6 @@ ln -s ~/code/about-mac/zsh/.zsh_plugins.txt "$HOME"/.zsh_plugins.txt
 ln -s ~/code/about-mac/zsh/.vimrc "$HOME"/.vimrc
 ln -s ~/code/about-mac/zsh/atuin.toml "$XDG_CONFIG_HOME"/atuin/config.toml
 ln -s ~/code/about-mac/zsh/lsd.yaml "$XDG_CONFIG_HOME"/lsd/config.yaml
-ln -s ~/code/about-mac/zsh/k9s.yaml "$XDG_CONFIG_HOME"/k9s/views.yaml
+
+ln -s ~/code/about-mac/zsh/k9s/views.yaml "$XDG_CONFIG_HOME"/k9s/views.yaml
+ln -s ~/code/about-mac/zsh/k9s/config.yaml "$XDG_CONFIG_HOME"/k9s/config.yaml

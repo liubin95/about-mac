@@ -1,17 +1,17 @@
-# todo 无效 $XDG_CONFIG_HOME/k9s/views.yaml
+# $XDG_CONFIG_HOME/k9s/views.yaml
 views:
-  v1/node:
+  v1/nodes:
     columns:
     - NAME
     - INTERNAL-IP
     - STATUS
     - VERSION
     - PODS
-    - CPU
-    - MEM
+    - "%CPU"
+    - "%MEM"
   # alters the pod view column layout
-  v1/pod:
-    sortColumn: NAME:desc
+  v1/pods:
+    sortColumn: STATUS:desc
     columns:
     - NAMESPACE
     - NAME
