@@ -123,6 +123,9 @@ export BUILDKIT_PROGRESS=plain
 
 # k8s config start
 alias k='kubectl'
+# [op]
+alias kl='kubectl -n light'
+alias km='kubectl -n monitor'
 # completion
 command -v kubectl >/dev/null && source <(kubectl completion zsh)
 command -v flux >/dev/null && source <(flux completion zsh)

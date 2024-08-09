@@ -116,4 +116,5 @@ zsh-users/zsh-autosuggestions kind:defer
 $HOME/custom/completions/_ksw
 $HOME/custom/completions/_docker
 $HOME/custom/completions/_tc
+$HOME/custom/completions/_minikube
 zsh-users/zsh-completions path:src kind:fpath

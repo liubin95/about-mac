@@ -13,11 +13,17 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+" 该插件提供自动结束引号、圆括号、方括号等
 Plugin 'Raimondi/delimitMate'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Yggdroot/indentLine'
+" 主题
 Plugin 'dracula/vim', { 'name': 'dracula' }
+" 注释相关,:help nerdcommenter
+" <leader>ci 切换注释状态
+" 5<leader>ci 注释5行
+Plugin 'scrooloose/nerdcommenter'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -35,7 +41,7 @@ Plugin 'dracula/vim', { 'name': 'dracula' }
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -47,7 +53,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 set number
 set laststatus=2
+
 let g:airline_theme='luna'
+let mapleader = ","
 
 syntax enable
 colorscheme dracula
