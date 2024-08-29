@@ -98,6 +98,8 @@ open /tmp
 open -a WeChat
 # 打开app和参数
 open -a LibreOffice 日常函件浏览器指标10.10\(1\).xlsx
+# open url
+open -a "Google Chrome.app" http://127.0.0.1:1234
 ```
 
 - 剪切板
