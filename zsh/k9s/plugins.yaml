@@ -1,0 +1,13 @@
+plugins:
+  tspinlog:
+    shortCut: Ctrl-L
+    confirm: false
+    description: "Logs with color"
+    scopes:
+    - pods
+    command: kubectl
+    background: false
+    args:
+    - tspin
+    - $NAME
+    - $NAMESPACE

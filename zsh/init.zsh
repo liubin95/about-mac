@@ -32,3 +32,6 @@ ln -s ~/code/about-mac/zsh/lsd.yaml "$XDG_CONFIG_HOME"/lsd/config.yaml
 
 ln -s ~/code/about-mac/zsh/k9s/views.yaml "$XDG_CONFIG_HOME"/k9s/views.yaml
 ln -s ~/code/about-mac/zsh/k9s/config.yaml "$XDG_CONFIG_HOME"/k9s/config.yaml
+ln -s ~/code/about-mac/zsh/k9s/plugins.yaml "$XDG_CONFIG_HOME"/k9s/plugins.yaml
+ln -s ~/code/about-mac/zsh/k9s/kubectl-plugins/kubectl-tspin /usr/local/bin/kubectl-tspin
+ln -s ~/code/about-mac/zsh/k9s/skins/dracula.yaml "$XDG_CONFIG_HOME"/k9s/skins/dracula.yaml

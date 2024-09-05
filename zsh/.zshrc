@@ -59,7 +59,7 @@ unproxy () {
 
 # hummus 的编译需要设置这个环境变量 [op]
 export EXTRA_NODE_PRE_GYP_FLAGS=""
-
+export PUPPETEER_SKIP_DOWNLOAD="true"
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -119,6 +119,7 @@ command -v rbenv >/dev/null && eval "$(rbenv init - zsh)"
 
 # docker config start
 export BUILDKIT_PROGRESS=plain
+export DOCKER_BUILDKIT=1
 # docker config end
 
 # k8s config start

@@ -1,2 +1,13 @@
 k9s:
   screenDumpDir: /Users/liubin/Downloads
+  # Toggles whether k9s should exit when CTRL-C is pressed. When set to true, you will need to exist k9s via the :quit command. Default is false.
+  noExitOnCtrlC: true
+  # Logs configuration
+  logger:
+    # Defines the number of lines to return. Default 100
+    tail: 100
+    # Defines the total number of log lines to allow in the view. Default 1000
+    buffer: 10000
+  ui:
+    # Uses in_the_navy skin located in your $XDG_CONFIG_HOME/skins/dracula.yaml
+    skin: dracula # => All clusters will use this skin unless otherwise specified in the context configuration file
