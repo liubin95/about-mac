@@ -20,8 +20,11 @@ autoload -Uz compinit && compinit
 # User configuration
 export XDG_STATE_HOME=$HOME/.config/state
 export XDG_CONFIG_HOME=$HOME/.config
-# export MANPATH="/usr/local/man:$MANPATH"
-
+# https://hf-mirror.com/
+export HF_ENDPOINT=https://hf-mirror.com
+# hummus 的编译需要设置这个环境变量 [op]
+export EXTRA_NODE_PRE_GYP_FLAGS=""
+export PUPPETEER_SKIP_DOWNLOAD="true"
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -57,13 +60,10 @@ unproxy () {
   echo "All Proxy off"
 }
 
-# hummus 的编译需要设置这个环境变量 [op]
-export EXTRA_NODE_PRE_GYP_FLAGS=""
-export PUPPETEER_SKIP_DOWNLOAD="true"
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
+# 设置个人别名，覆盖 oh-my-zsh 库提供的别名，
+# 插件和主题。别名可以放在这里，不过 oh-my-zsh
+# 鼓励用户在 ZSH_CUSTOM 文件夹中定义别名。
+# 要获取活动别名的完整列表，请运行 `alias`。
 #
 # Example aliases
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -106,9 +106,6 @@ command -v pyenv >/dev/null && eval "$(pyenv init -)"
 # pyenv end
 
 # android start [op]
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 # android end
 
@@ -120,6 +117,26 @@ command -v rbenv >/dev/null && eval "$(rbenv init - zsh)"
 # docker config start
 export BUILDKIT_PROGRESS=plain
 export DOCKER_BUILDKIT=1
+docker-clean-all(){
+  # 删除所有停止的容器
+  if [ "$(docker ps -a -q)" ]; then
+    docker rm $(docker ps -a -q)
+  else
+    echo "No containers to remove."
+  fi
+
+  # 清理未使用的卷
+  docker volume prune -f
+
+  # 清理未使用的镜像
+  docker image prune -a -f
+
+  # 清理未使用的系统资源，包括网络和卷
+  docker system prune --volumes -f
+
+  # 清理构建缓存
+  docker builder prune -a -f
+}
 # docker config end
 
 # k8s config start
