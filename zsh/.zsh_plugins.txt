@@ -38,6 +38,7 @@ $HOME/custom/plugins/bak
 $HOME/custom/plugins/bat
 $HOME/custom/plugins/ksp
 $HOME/custom/plugins/zshfast
+$HOME/custom/plugins/docker-image-save
 
 ### Prompts
 #
@@ -117,4 +118,5 @@ $HOME/custom/completions/_ksw
 $HOME/custom/completions/_docker
 $HOME/custom/completions/_tc
 $HOME/custom/completions/_minikube
+$HOME/custom/completions kind:fpath
 zsh-users/zsh-completions path:src kind:fpath

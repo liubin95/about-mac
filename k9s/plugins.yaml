@@ -11,3 +11,17 @@ plugins:
     - tspin
     - $NAME
     - $NAMESPACE
+  stern_log:
+    shortCut: Ctrl-Y
+    confirm: false
+    description: "Logs with <Stern>"
+    scopes:
+    - pods
+    command: stern
+    background: false
+    args:
+    - --tail
+    - 50
+    - $FILTER
+    - -n
+    - $NAMESPACE
