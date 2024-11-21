@@ -71,22 +71,6 @@
 
 ## 操作
 
-### WI-FI
-
-```shell
-# 打开 WI-FI
-networksetup -setairportpower en0 on
-# Create a symbolic link to the airport command for easy access:
-sudo ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
-# 扫描 WiFi
-airport -s
-# 加入 WI-FI
-networksetup -setairportnetwork en0 WIFI_SSID WIFI_PASSWORD
-
-```
-
-### Finder and Terminal
-
 - terminal 打开 finder
 
 ```shell
@@ -102,6 +86,16 @@ open -a LibreOffice 日常函件浏览器指标10.10\(1\).xlsx
 open -a "Google Chrome.app" http://127.0.0.1:1234
 ```
 
+- Finder
+
+```shell
+# 显示隐藏文件
+# shift + command + .
+# 跳转路径
+# command + shift + g
+
+```
+
 - 剪切板
 
 ```shell
@@ -110,7 +104,3 @@ base64 info.png | pbcopy
 # 输出剪切板
 pbpaste | base64 -d > info.png
 ```
-
-## [homebrew](https://brew.sh)
-
-安装和管理软件，神器！！
