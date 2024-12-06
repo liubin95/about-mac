@@ -7,7 +7,8 @@
 - [Homebrew 安装软件](https://brew.sh)
 - [alfred 搜索和集成](https://www.alfredapp.com/)
 - [CleanMyMac X](https://cleanmymac.com/)
-- [Snipaste 截图软件](https://www.snipaste.com/)
+- ~~[Snipaste 截图软件](https://www.snipaste.com/)~~
+- [截图软件 iShot](https://apps.apple.com/us/app/ishot-screenshot-recording-ocr/id1485844094?mt=12)
 - [自动切换输入法](https://github.com/itsuhane/SwitchKey)
 - [Microsoft Remote Desktop 远程连接Windows](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac)
 - [Logitech Options 罗技客户端](https://www.logitech.com.cn/zh-cn/software/options.html)
