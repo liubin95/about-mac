@@ -9,7 +9,8 @@
 - [CleanMyMac X](https://cleanmymac.com/)
 - ~~[Snipaste 截图软件](https://www.snipaste.com/)~~
 - [截图软件 iShot](https://apps.apple.com/us/app/ishot-screenshot-recording-ocr/id1485844094?mt=12)
-- [自动切换输入法](https://github.com/itsuhane/SwitchKey)
+- ~~[自动切换输入法](https://github.com/itsuhane/SwitchKey)~~
+- [自动切换输入法](https://inputsource.pro/zh-CN)
 - [Microsoft Remote Desktop 远程连接Windows](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac)
 - [Logitech Options 罗技客户端](https://www.logitech.com.cn/zh-cn/software/options.html)
 - [numi 计算器](https://github.com/nikolaeu/numi/wiki)
@@ -20,6 +21,8 @@
 - loop 窗口编排
 - [CheatSheet 长按 Command 键就可以显示所有的快捷键，也可以直接点击调用](https://www.mediaatelier.com/CheatSheet/)
 - [配色主题](https://draculatheme.com/)
+- [按键和鼠标的记录](https://whatpulse.org/)
+- [窗口时间的记录](https://github.com/ActivityWatch/activitywatch)
 
 ### 输入法
 
