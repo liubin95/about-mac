@@ -25,6 +25,10 @@
 ###
 romkatv/powerlevel10k
 mattmc3/zsh-safe-rm
+liubin95/zsh-plugins path:jump
+liubin95/zsh-plugins path:zshfast
+liubin95/zsh-plugins path:ksw
+liubin95/zsh-plugins path:tt
 
 ### 本地插件
 #
@@ -32,13 +36,8 @@ mattmc3/zsh-safe-rm
 # 承载你自己的自定义插件。
 #
 ###
-$HOME/custom/plugins/ksw
-$HOME/custom/plugins/tt
 $HOME/custom/plugins/bak
 $HOME/custom/plugins/bat
-$HOME/custom/plugins/ksp
-$HOME/custom/plugins/zshfast
-$HOME/custom/plugins/docker-image-save
 
 ### Prompts
 #
@@ -114,9 +113,7 @@ zsh-users/zsh-autosuggestions kind:defer
 #
 ###
 
-$HOME/custom/completions/_ksw
 $HOME/custom/completions/_docker
-$HOME/custom/completions/_tc
 $HOME/custom/completions/_minikube
 $HOME/custom/completions kind:fpath
 zsh-users/zsh-completions path:src kind:fpath
