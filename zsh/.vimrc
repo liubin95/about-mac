@@ -19,7 +19,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Yggdroot/indentLine'
 " 主题
-Plugin 'dracula/vim', { 'name': 'dracula' }
+" Plugin 'dracula/vim', { 'name': 'dracula' }
+Plugin 'catppuccin/vim', { 'name': 'catppuccin_frappe' }
 " 注释相关,:help nerdcommenter
 " <leader>ci 切换注释状态
 " 5<leader>ci 注释5行
@@ -58,5 +59,5 @@ let g:airline_theme='luna'
 let mapleader = ","
 
 syntax enable
-colorscheme dracula
+colorscheme catppuccin_frappe
 

@@ -20,9 +20,11 @@
 - ~~[yabai 窗口编排](https://github.com/koekeishiya/yabai)~~
 - loop 窗口编排
 - [CheatSheet 长按 Command 键就可以显示所有的快捷键，也可以直接点击调用](https://www.mediaatelier.com/CheatSheet/)
-- [配色主题](https://draculatheme.com/)
+- [配色主题 德古拉](https://draculatheme.com/)
+- [配色主题 Catppuccin](https://github.com/catppuccin/catppuccin)
 - [按键和鼠标的记录](https://whatpulse.org/)
 - [窗口时间的记录](https://github.com/ActivityWatch/activitywatch)
+- 1password
 
 ### 输入法
 

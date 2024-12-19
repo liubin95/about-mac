@@ -29,6 +29,7 @@ liubin95/zsh-plugins path:jump
 liubin95/zsh-plugins path:zshfast
 liubin95/zsh-plugins path:ksw
 liubin95/zsh-plugins path:tt
+liubin95/zsh-plugins path:cat
 
 ### 本地插件
 #
@@ -36,8 +37,6 @@ liubin95/zsh-plugins path:tt
 # 承载你自己的自定义插件。
 #
 ###
-$HOME/custom/plugins/bak
-$HOME/custom/plugins/bat
 
 ### Prompts
 #
@@ -117,3 +116,5 @@ $HOME/custom/completions/_docker
 $HOME/custom/completions/_minikube
 $HOME/custom/completions kind:fpath
 zsh-users/zsh-completions path:src kind:fpath
+liubin95/zsh-plugins path:tt/_tt
+liubin95/zsh-plugins path:ksw/_ksw
