@@ -8,13 +8,14 @@
 - [alfred 搜索和集成](https://www.alfredapp.com/)
 - [CleanMyMac X](https://cleanmymac.com/)
 - ~~[Snipaste 截图软件](https://www.snipaste.com/)~~
-- [截图软件 iShot](https://apps.apple.com/us/app/ishot-screenshot-recording-ocr/id1485844094?mt=12)
+- ~~[截图软件 iShot](https://apps.apple.com/us/app/ishot-screenshot-recording-ocr/id1485844094?mt=12)~~
+- [截图软件 Xnip](https://apps.apple.com/cn/app/xnip-screenshot-annotation/id1221250572?mt=12)
 - ~~[自动切换输入法](https://github.com/itsuhane/SwitchKey)~~
 - [自动切换输入法](https://inputsource.pro/zh-CN)
 - [Microsoft Remote Desktop 远程连接Windows](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac)
 - [Logitech Options 罗技客户端](https://www.logitech.com.cn/zh-cn/software/options.html)
 - [numi 计算器](https://github.com/nikolaeu/numi/wiki)
-- [draw.io 画图软件](https://app.diagrams.net/)
+- todo [draw.io 画图软件](https://app.diagrams.net/)
 - ~~[run cat](https://apps.apple.com/cn/app/runcat/id1429033973?mt=12)~~
 - dockx
 - ~~[yabai 窗口编排](https://github.com/koekeishiya/yabai)~~
