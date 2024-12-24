@@ -56,7 +56,8 @@
 
 #### 容器
 
-- todo [podman 比docker消耗资源少](https://podman.io/)
+- [podman 比docker消耗资源少](https://podman.io/)
+    - [podman compose](https://github.com/containers/podman-compose)
 - [miniKube k8s的本地环境](https://minikube.sigs.k8s.io/docs/)
 - [k9s k8s的命令行工具](https://k9scli.io/)
 

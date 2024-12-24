@@ -25,11 +25,14 @@
 ###
 romkatv/powerlevel10k
 mattmc3/zsh-safe-rm
+# 自定义的组件
+# antidote update 会自动更新
 liubin95/zsh-plugins path:jump
 liubin95/zsh-plugins path:zshfast
 liubin95/zsh-plugins path:ksw
 liubin95/zsh-plugins path:tt
 liubin95/zsh-plugins path:cat
+liubin95/zsh-plugins path:docker-clean-all
 
 ### 本地插件
 #
@@ -82,15 +85,14 @@ getantidote/use-omz
 ohmyzsh/ohmyzsh path:lib/clipboard.zsh
 ohmyzsh/ohmyzsh path:plugins/dirhistory
 ohmyzsh/ohmyzsh path:plugins/z
+ohmyzsh/ohmyzsh path:plugins/extract
 ohmyzsh/ohmyzsh path:plugins/nvm kind:defer
 
 ### 推迟的插件
 #
-# Antidote 允许您延迟加载插件。这与其他插件管理器中的 "turbo
-# 模式 "等概念。Antidote 通过利用
-# romkatv/zsh-defer，它可以 "推迟 zsh 命令的执行，直到 zsh 没有其他工作可做，并等待用户执行
-# 等待用户输入"。一般来说，除非
-# 您可以确定它们正确支持延迟加载，并且不会产生不利的
+# Antidote 允许您延迟加载插件。这与其他插件管理器中的 "turbo模式 "等概念。
+# Antidote 通过利用romkatv/zsh-defer，它可以 "推迟 zsh 命令的执行，直到 zsh 没有其他工作可做，并等待用户执行等待用户输入"。
+# 一般来说，除非您可以确定它们正确支持延迟加载，并且不会产生不利的
 # 副作用（参见：https://github.com/romkatv/zsh-defer#Caveats）。不过，对于
 # 某些插件，这可以大大提高 zsh 的启动速度。
 #
@@ -112,9 +114,9 @@ zsh-users/zsh-autosuggestions kind:defer
 #
 ###
 
-$HOME/custom/completions/_docker
-$HOME/custom/completions/_minikube
-$HOME/custom/completions kind:fpath
+$HOME/custom/completions/_podman kind:defer
+$HOME/custom/completions/_podman_compose kind:defer
+$HOME/custom/completions/_minikube kind:defer
 zsh-users/zsh-completions path:src kind:fpath
 liubin95/zsh-plugins path:tt/_tt
 liubin95/zsh-plugins path:ksw/_ksw

@@ -41,6 +41,9 @@ proxy () {
   export https_proxy=http://127.0.0.1:$PROXY_PORT
   export http_proxy=http://127.0.0.1:$PROXY_PORT
   export all_proxy=socks5://127.0.0.1:$PROXY_PORT
+  # podman machine 会复制环境变量 https_proxy 并且替换为 host.containers.internal
+  # 需要设置 host.containers.internal 为 no_proxy
+  export no_proxy="host.containers.internal,*.zf.link,localhost"
   git config --global http.proxy http://127.0.0.1:$PROXY_PORT
   git config --global https.proxy https://127.0.0.1:$PROXY_PORT
   if [ "$1" != "silent" ]; then
@@ -115,28 +118,9 @@ command -v rbenv >/dev/null && eval "$(rbenv init - zsh)"
 # ruby end
 
 # docker config start
-export BUILDKIT_PROGRESS=plain
-export DOCKER_BUILDKIT=1
-docker-clean-all(){
-  # 删除所有停止的容器
-  if [ "$(docker ps -a -q)" ]; then
-    docker rm $(docker ps -a -q)
-  else
-    echo "No containers to remove."
-  fi
-
-  # 清理未使用的卷
-  docker volume prune -f
-
-  # 清理未使用的镜像
-  docker image prune -a -f
-
-  # 清理未使用的系统资源，包括网络和卷
-  docker system prune --volumes -f
-
-  # 清理构建缓存
-  docker builder prune -a -f
-}
+alias docker=podman
+alias docker-compose=podman-compose
+export PODMAN_COMPOSE_PROVIDER=/opt/homebrew/bin/podman-compose
 # docker config end
 
 # k8s config start
