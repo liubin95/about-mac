@@ -1,5 +1,3 @@
-# 统计zshrc加载时间
-# zmodload zsh/zprof
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -25,15 +23,15 @@ export HF_ENDPOINT=https://hf-mirror.com
 # hummus 的编译需要设置这个环境变量 [op]
 export EXTRA_NODE_PRE_GYP_FLAGS=""
 export PUPPETEER_SKIP_DOWNLOAD="true"
+# tldr 的设置
+export TLDR_LANG="zh"
+alias cman="tldr"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+export EDITOR='vim'
 
 # where proxy
 export PROXY_PORT=7890
@@ -81,9 +79,9 @@ alias lt2='lsd --tree --depth 2'
 alias zshconfig="code ~/.zshrc"
 alias zshup="source ~/.zshrc"
 
-#cman start
-alias cman='man -M /usr/local/share/man/zh_CN'
-#cman end
+# tmuxinator 相关的别名
+alias tmux-start="tmuxinator start --local"
+alias tmux-stop="tmuxinator stop --local"
 
 #watch start
 # 通过将 watch 本身别名为 alias watchh='watch ' （带有尾随空格）
@@ -133,5 +131,3 @@ command -v kubectl >/dev/null && source <(kubectl completion zsh)
 command -v flux >/dev/null && source <(flux completion zsh)
 # k8s config end
 
-# 统计zshrc加载时间
-# zprof

@@ -53,6 +53,10 @@
 - [lsd 功能强大的ls](https://github.com/lsd-rs/lsd)
 - [tailspin 日志查看工具](https://github.com/bensadeh/tailspin)
 - [mac 上的命令行](https://git.herrbischoff.com/awesome-macos-command-line/about/)
+- [`tldr`更加平易近人的`man`](https://github.com/tldr-pages/tldr)
+- [tmux 终端复用](https://github.com/tmux/tmux)
+    - [tmux 插件管理](https://github.com/tmux-plugins/tpm)
+    - [tmux 窗口管理](https://github.com/tmuxinator/tmuxinator)
 
 #### 容器
 

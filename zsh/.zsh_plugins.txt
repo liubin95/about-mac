@@ -31,7 +31,7 @@ liubin95/zsh-plugins path:jump
 liubin95/zsh-plugins path:zshfast
 liubin95/zsh-plugins path:ksw
 liubin95/zsh-plugins path:tt
-liubin95/zsh-plugins path:cat
+liubin95/zsh-plugins path:bat
 liubin95/zsh-plugins path:docker-clean-all
 
 ### 本地插件
