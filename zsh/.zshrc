@@ -24,11 +24,10 @@ export HF_ENDPOINT=https://hf-mirror.com
 export EXTRA_NODE_PRE_GYP_FLAGS=""
 export PUPPETEER_SKIP_DOWNLOAD="true"
 # tldr 的设置
-export TLDR_LANG="zh"
 alias cman="tldr"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=zh_CN.UTF-8
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'

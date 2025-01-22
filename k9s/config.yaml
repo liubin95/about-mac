@@ -10,4 +10,4 @@ k9s:
     buffer: 10000
   ui:
     # Uses in_the_navy skin located in your $XDG_CONFIG_HOME/skins/dracula.yaml
-    skin: catppuccin-latte-transparent # => All clusters will use this skin unless otherwise specified in the context configuration file
+    skin: catppuccin-frappe-transparent # => All clusters will use this skin unless otherwise specified in the context configuration file
