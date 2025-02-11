@@ -23,6 +23,7 @@ export HF_ENDPOINT=https://hf-mirror.com
 # hummus 的编译需要设置这个环境变量 [op]
 export EXTRA_NODE_PRE_GYP_FLAGS=""
 export PUPPETEER_SKIP_DOWNLOAD="true"
+export KSW_ENVIRONMENTS="dev prd minikube heytea local"
 # tldr 的设置
 alias cman="tldr"
 

@@ -44,7 +44,7 @@
 #### 命令行
 
 - ~~[mac的系统服务管理](https://www.launchd.info/)~~
-- [iterm2 终端](https://iterm2.com/)
+- ~~[iterm2 终端](https://iterm2.com/)~~
 - [wezterm 新的终端](https://github.com/wez/wezterm)
 - ~~[oh my zsh zsh的工具](https://ohmyz.sh/)~~
 - ~~[zplug zsh 插件管理](https://github.com/zplug/zplug)~~

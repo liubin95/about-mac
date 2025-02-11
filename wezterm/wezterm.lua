@@ -3,7 +3,7 @@ local config = {}
 
 -- Color scheme
 -- https://github.com/catppuccin/wezterm
-config.color_scheme = 'Catppuccin Frappe'
+config.color_scheme = 'Catppuccin Latte'
 
 -- Font
 config.font =
