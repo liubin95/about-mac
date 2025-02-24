@@ -1,3 +1,4 @@
+-- https://wezterm.org/config/files.html
 local wezterm = require 'wezterm'
 local config = {}
 
@@ -17,5 +18,12 @@ config.use_fancy_tab_bar = false
 
 -- 设置窗口背景透明度，值范围为 0.0（完全透明）到 1.0（不透明）
 config.window_background_opacity = 1.0
+
+config.keys = {
+    -- copy mode
+  { key = 'C', mods = 'CMD', action = wezterm.action.ActivateCopyMode },
+    -- 开启一个pane
+  { key = 'T',mods = 'CMD', action = wezterm.action.SplitPane { direction = 'Right', size = { Percent = 50 } } }
+}
 
 return config

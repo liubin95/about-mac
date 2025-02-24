@@ -63,6 +63,17 @@
 
 - [podman 比docker消耗资源少](https://podman.io/)
     - [podman compose](https://github.com/containers/podman-compose)
+
+```sh
+# podman with minikube
+# 使用没有Sudo的Podman
+minikube config set rootless true
+# 对于无根的Podman，建议设置--container-runtime到containerd
+# 使用calico网络插件
+minikube start --driver=podman --container-runtime=containerd --cni=calico
+
+```
+
 - [miniKube k8s的本地环境](https://minikube.sigs.k8s.io/docs/)
 - [k9s k8s的命令行工具](https://k9scli.io/)
 
