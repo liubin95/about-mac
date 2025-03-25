@@ -23,7 +23,7 @@ export HF_ENDPOINT=https://hf-mirror.com
 # hummus 的编译需要设置这个环境变量 [op]
 export EXTRA_NODE_PRE_GYP_FLAGS=""
 export PUPPETEER_SKIP_DOWNLOAD="true"
-export KSW_ENVIRONMENTS="dev prd minikube heytea local"
+export KSW_ENVIRONMENTS="dev prd minikube heytea singapore"
 # tldr 的设置
 alias cman="tldr"
 
@@ -35,31 +35,12 @@ export EDITOR='vim'
 
 # where proxy
 export PROXY_PORT=7890
-proxy () {
-  export https_proxy=http://127.0.0.1:$PROXY_PORT
-  export http_proxy=http://127.0.0.1:$PROXY_PORT
-  export all_proxy=socks5://127.0.0.1:$PROXY_PORT
-  # podman machine 会复制环境变量 https_proxy 并且替换为 host.containers.internal
-  # 需要设置 host.containers.internal 为 no_proxy
-  export no_proxy="host.containers.internal,*.zf.link,localhost"
-  git config --global http.proxy http://127.0.0.1:$PROXY_PORT
-  git config --global https.proxy https://127.0.0.1:$PROXY_PORT
-  if [ "$1" != "silent" ]; then
-    echo "All Proxy on"
-  fi
-}
+# podman machine 会复制环境变量 https_proxy 并且替换为 host.containers.internal
+# 需要设置 host.containers.internal 为 no_proxy
+export no_proxy="host.containers.internal,*.zf.link,localhost"
 # auto proxy
 nc -z localhost $PROXY_PORT > /dev/null 2>&1 && proxy silent
 
-# where noproxy
-unproxy () {
-  unset https_proxy
-  unset http_proxy
-  unset all_proxy
-  git config --global --unset http.proxy
-  git config --global --unset https.proxy
-  echo "All Proxy off"
-}
 
 # 设置个人别名，覆盖 oh-my-zsh 库提供的别名，
 # 插件和主题。别名可以放在这里，不过 oh-my-zsh
@@ -82,6 +63,10 @@ alias zshup="source ~/.zshrc"
 # tmuxinator 相关的别名
 alias tmux-start="tmuxinator start --local"
 alias tmux-stop="tmuxinator stop --local"
+# yarn 相关的别名
+alias y="yarn"
+# python 相关的别名
+alias py="python"
 
 #watch start
 # 通过将 watch 本身别名为 alias watchh='watch ' （带有尾随空格）
@@ -131,3 +116,11 @@ command -v kubectl >/dev/null && source <(kubectl completion zsh)
 command -v flux >/dev/null && source <(flux completion zsh)
 # k8s config end
 
+
+# pnpm
+export PNPM_HOME="/Users/liubin/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

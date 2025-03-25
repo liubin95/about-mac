@@ -33,6 +33,7 @@ liubin95/zsh-plugins path:ksw
 liubin95/zsh-plugins path:tt
 liubin95/zsh-plugins path:bat
 liubin95/zsh-plugins path:docker-clean-all
+liubin95/zsh-plugins path:proxy
 
 ### 本地插件
 #

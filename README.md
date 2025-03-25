@@ -11,11 +11,11 @@
 - ~~[截图软件 iShot](https://apps.apple.com/us/app/ishot-screenshot-recording-ocr/id1485844094?mt=12)~~
 - [截图软件 Xnip](https://apps.apple.com/cn/app/xnip-screenshot-annotation/id1221250572?mt=12)
 - ~~[自动切换输入法](https://github.com/itsuhane/SwitchKey)~~
-- [自动切换输入法](https://inputsource.pro/zh-CN)
+- ~~[自动切换输入法](https://inputsource.pro/zh-CN)~~
 - [Microsoft Remote Desktop 远程连接Windows](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac)
 - [Logitech Options 罗技客户端](https://www.logitech.com.cn/zh-cn/software/options.html)
 - [numi 计算器](https://github.com/nikolaeu/numi/wiki)
-- todo [draw.io 画图软件](https://app.diagrams.net/)
+- ~~[draw.io 画图软件](https://app.diagrams.net/)~~
 - ~~[run cat](https://apps.apple.com/cn/app/runcat/id1429033973?mt=12)~~
 - dockx
 - ~~[yabai 窗口编排](https://github.com/koekeishiya/yabai)~~
@@ -128,3 +128,24 @@ base64 info.png | pbcopy
 # 输出剪切板
 pbpaste | base64 -d > info.png
 ```
+
+## ai
+
+### 模型
+
+- [gpt-4](https://openai.com/api/)
+- [claude](https://claude.ai/new)
+
+### 工具
+
+- [cursor](https://www.cursor.com/cn)
+
+### [mcp](https://modelcontextprotocol.io/introduction)
+
+- [网页搜索](https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search)
+- [构建记忆](https://github.com/modelcontextprotocol/servers/tree/main/src/memory)
+- [数据抓取](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch)
+- [浏览器自动化](https://github.com/modelcontextprotocol/servers/tree/main/src/playwright)
+- [时间](https://github.com/modelcontextprotocol/servers/tree/main/src/time)
+
+
