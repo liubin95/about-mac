@@ -41,7 +41,7 @@ liubin95/zsh-plugins path:proxy
 # 承载你自己的自定义插件。
 #
 ###
-
+#/Users/liubin/code/zsh-plugins/tt
 ### Prompts
 #
 # 您可以使用 `kind:fpath` 注解。在该命令 运行：

@@ -23,7 +23,7 @@ export HF_ENDPOINT=https://hf-mirror.com
 # hummus 的编译需要设置这个环境变量 [op]
 export EXTRA_NODE_PRE_GYP_FLAGS=""
 export PUPPETEER_SKIP_DOWNLOAD="true"
-export KSW_ENVIRONMENTS="dev prd minikube heytea singapore"
+export KSW_ENVIRONMENTS="dev prd minikube heytea singapore dev-istio"
 # tldr 的设置
 alias cman="tldr"
 
@@ -53,11 +53,13 @@ nc -z localhost $PROXY_PORT > /dev/null 2>&1 && proxy silent
 # >>> lsd start 2024年7月19日 >>> [op]
 alias ll="lsd -l"
 alias lla="lsd -al"
+alias l="lsd -al"
 alias lt='lsd --tree'
 alias lt2='lsd --tree --depth 2'
 # <<< lsd end <<<
 
-alias zshconfig="code ~/.zshrc"
+alias code="fleet"
+alias zshconfig="fleet ~/.zshrc"
 alias zshup="source ~/.zshrc"
 
 # tmuxinator 相关的别名
