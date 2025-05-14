@@ -40,7 +40,7 @@ config.color_scheme = 'Catppuccin Latte'
 
 -- Font
 config.font =
-    wezterm.font('JetBrains Mono', { weight = 'Bold', italic = true })
+    wezterm.font('JetBrains Maple Mono', { weight = 'Bold', italic = true })
 config.font_size = 15.0
 
 -- Tab bar
