@@ -35,3 +35,5 @@ mkdir "$XDG_CONFIG_HOME"/tmux
 ln -sf "$DIR"/tmux/tmux.conf "$XDG_CONFIG_HOME"/tmux/tmux.conf
 
 ln -sf "$DIR"/wezterm "$XDG_CONFIG_HOME"
+
+ln -sf "$DIR/git/.gitconfig" "$HOME/.gitconfig"

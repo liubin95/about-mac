@@ -1,0 +1,48 @@
+[credential "https://git.zf.link/"]
+    username = bin.liu
+
+[user]
+	name = liubin
+	email = liu_bin4835@outlook.com
+[core]
+	autocrlf = input
+	hooksPath = /Users/liubin/.git-hooks
+	quotepath = false
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[http]
+	postBuffer = 524288000
+
+# clearly makes git better
+[column]
+        ui = auto
+[branch]
+        sort = -committerdate
+[tag]
+        sort = version:refname
+[diff]
+        algorithm = histogram
+        colorMoved = plain
+        mnemonicPrefix = true
+        renames = true
+[push]
+        default = simple
+        autoSetupRemote = true
+        followTags = true
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
+# why the hell not?
+[help]
+        autocorrect = prompt
+[rebase]
+        autoSquash = true
+        autoStash = true
+        updateRefs = true
+# a matter of taste (uncomment if you dare)
+[pull]
+        rebase = true
