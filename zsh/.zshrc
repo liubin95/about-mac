@@ -23,7 +23,7 @@ export HF_ENDPOINT=https://hf-mirror.com
 # hummus 的编译需要设置这个环境变量 [op]
 export EXTRA_NODE_PRE_GYP_FLAGS=""
 export PUPPETEER_SKIP_DOWNLOAD="true"
-export KSW_ENVIRONMENTS="dev prd minikube heytea singapore dev-istio lima jichacha"
+export KSW_ENVIRONMENTS="dev prd minikube heytea singapore jichacha"
 # tldr 的设置
 alias cman="tldr"
 
@@ -58,20 +58,18 @@ alias lt='lsd --tree'
 alias lt2='lsd --tree --depth 2'
 # <<< lsd end <<<
 
-alias code="fleet"
+alias code="cursor"
 alias ai="cursor"
-alias zshconfig="fleet ~/.zshrc"
+alias zshconfig="cursor ~/.zshrc"
 alias zshup="source ~/.zshrc"
 
 # tmuxinator 相关的别名
-alias tmux-start="tmuxinator start --local"
-alias tmux-stop="tmuxinator stop --local"
+alias mux=tmuxinator
 # yarn 相关的别名
 alias y="yarn"
 # python 相关的别名
 alias py="python"
-
-#watch start
+# watch start
 # 通过将 watch 本身别名为 alias watchh='watch ' （带有尾随空格）
 # 然后使用 watchh k ，可以强制当前交互式 shell 展开 k 在传递给 watch 之前。
 alias watchh='watch '
@@ -127,3 +125,19 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

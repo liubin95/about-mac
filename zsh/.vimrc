@@ -5,16 +5,21 @@ call plug#begin()
 " Plug on GitHub repo
 " 该插件提供自动结束引号、圆括号、方括号等
 Plug 'Raimondi/delimitMate'
+" airline 主题
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Yggdroot/indentLine'
+" 缩进线
+" Plug 'Yggdroot/indentLine'
+Plug 'nathanaelkane/vim-indent-guides'
 " 主题
 " Plug 'dracula/vim', { 'name': 'dracula' }
-Plug 'catppuccin/vim', { 'name': 'catppuccin_frappe' }
+Plug 'catppuccin/vim', { 'name': 'catppuccin_latte' }
 " 注释相关,:help nerdcommenter
 " <leader>ci 切换注释状态
 " 5<leader>ci 注释5行
 Plug 'scrooloose/nerdcommenter'
+" YAML 基础高亮
+Plug 'stephpy/vim-yaml'
 " Plug from http://vim-scripts.org/vim/scripts.html
 " Plug 'L9'
 " Git Plug not hosted on GitHub
@@ -27,7 +32,7 @@ Plug 'scrooloose/nerdcommenter'
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 " Plug 'ascenator/L9', {'name': 'newL9'}
-
+Plug 'terryma/vim-expand-region'
 call plug#end()
 
 "
@@ -39,10 +44,21 @@ call plug#end()
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plug stuff after this line
-let g:airline_theme='luna'
+let g:airline_theme='catppuccin_latte'
 let mapleader = ","
+
+" 缩进设置
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors=0
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size=1
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#04A5E5  ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#FE640B  ctermbg=4
+
+" 设置
 set number
 set laststatus=2
+set termguicolors
 set clipboard=unnamedplus
-colorscheme catppuccin_frappe
+colorscheme catppuccin_latte
 

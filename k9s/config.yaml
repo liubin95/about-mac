@@ -5,7 +5,7 @@ k9s:
   # Logs configuration
   logger:
     # Defines the number of lines to return. Default 100
-    tail: 100
+    tail: 10000
     # Defines the total number of log lines to allow in the view. Default 1000
     buffer: 10000
   ui:
