@@ -1,18 +1,21 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # >>> antidote start 2024年7月19日 >>> [op]
 # Source zstyles you might use with antidote.
-[[ -e ${HOME}/.zstyles ]] && source ${HOME}/.zstyles
+[[ -e ${HOME}/.zstyles ]] \
+  && source ${HOME}/.zstyles
 # load antidote
 source $HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh
 antidote load ${HOME}/.zsh_plugins.txt
 # Enable completion.
-autoload -Uz compinit && compinit
+autoload -Uz compinit \
+  && compinit
 # <<< antidote end <<<
 
 # User configuration
@@ -39,8 +42,8 @@ export PROXY_PORT=7890
 # 需要设置 host.containers.internal 为 no_proxy
 export no_proxy="host.containers.internal,*.zf.link,localhost"
 # auto proxy
-nc -z localhost $PROXY_PORT > /dev/null 2>&1 && proxy silent
-
+nc -z localhost $PROXY_PORT >/dev/null 2>&1 \
+  && proxy silent
 
 # 设置个人别名，覆盖 oh-my-zsh 库提供的别名，
 # 插件和主题。别名可以放在这里，不过 oh-my-zsh
@@ -80,16 +83,25 @@ alias watchh='watch '
 export NVM_DIR="$HOME/.nvm"
 # nvm end
 
+# bat start [op]
+command -v bat >/dev/null \
+  && alias cat='bat'
+# bat end
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.p10k.zsh ]] \
+  || source ~/.p10k.zsh
 
 # atuin
-command -v atuin >/dev/null && eval "$(atuin init zsh)"
+command -v atuin >/dev/null \
+  && eval "$(atuin init zsh)"
 
 # pyenv start
 export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-command -v pyenv >/dev/null && eval "$(pyenv init -)"
+[[ -d $PYENV_ROOT/bin ]] \
+  && export PATH="$PYENV_ROOT/bin:$PATH"
+command -v pyenv >/dev/null \
+  && eval "$(pyenv init -)"
 # pyenv end
 
 # android start [op]
@@ -98,7 +110,8 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
 # ruby start [op]
 export RUBY_BUILD_MIRROR_URL=https://cache.ruby-china.com
-command -v rbenv >/dev/null && eval "$(rbenv init - zsh)"
+command -v rbenv >/dev/null \
+  && eval "$(rbenv init - zsh)"
 # ruby end
 
 # docker config start
@@ -113,10 +126,11 @@ alias k='kubectl'
 alias kl='kubectl -n light'
 alias km='kubectl -n monitor'
 # completion
-command -v kubectl >/dev/null && source <(kubectl completion zsh)
-command -v flux >/dev/null && source <(flux completion zsh)
+command -v kubectl >/dev/null \
+  && source <(kubectl completion zsh)
+command -v flux >/dev/null \
+  && source <(flux completion zsh)
 # k8s config end
-
 
 # pnpm
 export PNPM_HOME="/Users/liubin/Library/pnpm"
@@ -125,19 +139,3 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
