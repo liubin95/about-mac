@@ -26,7 +26,9 @@ export HF_ENDPOINT=https://hf-mirror.com
 # hummus 的编译需要设置这个环境变量 [op]
 export EXTRA_NODE_PRE_GYP_FLAGS=""
 export PUPPETEER_SKIP_DOWNLOAD="true"
+# ksw 的环境变量
 export KSW_ENVIRONMENTS="dev prd minikube heytea singapore jichacha"
+export KSW_ENVIRONMENTS_PRD="prd heytea singapore"
 # tldr 的设置
 alias cman="tldr"
 
@@ -77,6 +79,11 @@ alias py="python"
 # 然后使用 watchh k ，可以强制当前交互式 shell 展开 k 在传递给 watch 之前。
 alias watchh='watch '
 #watch end
+
+# safe-rm
+# 通过设置一个别名 可以直接删除的文件
+alias unsafe-rm="command rm -i"
+# safe-rm end
 
 # nvm start [op]
 # 移动到zsh_plugins.txt 使用 kind:defer
@@ -139,3 +146,7 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# uv
+. "$HOME/.local/bin/env"
+# uv end

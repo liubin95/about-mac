@@ -41,6 +41,7 @@ liubin95/zsh-plugins path:proxy
 #
 ###
 #/Users/liubin/code/zsh-plugins/tt
+#/Users/liubin/code/zsh-plugins/ksw
 ### Prompts
 #
 # 您可以使用 `kind:fpath` 注解。在该命令 运行：
@@ -118,5 +119,4 @@ $HOME/custom/completions/_podman kind:defer
 $HOME/custom/completions/_podman_compose kind:defer
 $HOME/custom/completions/_minikube kind:defer
 zsh-users/zsh-completions path:src kind:fpath
-liubin95/zsh-plugins path:tt/_tt
 liubin95/zsh-plugins path:ksw/_ksw
