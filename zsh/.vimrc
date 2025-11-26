@@ -13,7 +13,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'nathanaelkane/vim-indent-guides'
 " 主题
 " Plug 'dracula/vim', { 'name': 'dracula' }
-Plug 'catppuccin/vim', { 'name': 'catppuccin_latte' }
+Plug 'catppuccin/vim', { 'name': 'catppuccin_macchiato' }
 " 注释相关,:help nerdcommenter
 " <leader>ci 切换注释状态
 " 5<leader>ci 注释5行
@@ -44,7 +44,7 @@ call plug#end()
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plug stuff after this line
-let g:airline_theme='catppuccin_latte'
+let g:airline_theme='catppuccin_macchiato'
 let mapleader = ","
 
 " 缩进设置
@@ -60,5 +60,5 @@ set number
 set laststatus=2
 set termguicolors
 set clipboard=unnamedplus
-colorscheme catppuccin_latte
+colorscheme catppuccin_macchiato
 

@@ -27,8 +27,8 @@ export HF_ENDPOINT=https://hf-mirror.com
 export EXTRA_NODE_PRE_GYP_FLAGS=""
 export PUPPETEER_SKIP_DOWNLOAD="true"
 # ksw 的环境变量
-export KSW_ENVIRONMENTS="dev prd minikube heytea singapore jichacha"
-export KSW_ENVIRONMENTS_PRD="prd heytea singapore"
+ export KSW_ENVIRONMENTS="dev prd minikube heytea jichacha lima"
+export KSW_ENVIRONMENTS_PRD="prd heytea"
 # tldr 的设置
 alias cman="tldr"
 
@@ -148,4 +148,5 @@ esac
 
 # uv
 . "$HOME/.local/bin/env"
+eval "$(uv generate-shell-completion zsh)"
 # uv end

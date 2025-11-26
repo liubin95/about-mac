@@ -36,12 +36,14 @@ local config = {}
 
 -- Color scheme
 -- https://github.com/catppuccin/wezterm
-config.color_scheme = 'Catppuccin Latte'
+config.color_scheme = 'Catppuccin Mocha'
 
 -- Font
-config.font =
-    wezterm.font('JetBrains Maple Mono', { weight = 'Bold', italic = true })
-config.font_size = 15.0
+config.font = wezterm.font_with_fallback {
+        {family = 'JetBrains Maple Mono', weight = 'Bold', italic = true },
+        {family = 'JetBrains Mono', weight = 'Bold', italic = true },
+        }
+config.font_size = 16.0
 
 -- Tab bar
 config.tab_bar_at_bottom = true
