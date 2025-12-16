@@ -9,8 +9,9 @@ plugins:
     background: false
     args:
     - tspin
-    - $NAME
+    - $FILTER
     - $NAMESPACE
+
   stern_log:
     shortCut: Ctrl-Y
     confirm: false
@@ -22,6 +23,7 @@ plugins:
     args:
     - --tail
     - 50
+    - -l
     - $FILTER
     - -n
     - $NAMESPACE

@@ -63,8 +63,7 @@ alias lt='lsd --tree'
 alias lt2='lsd --tree --depth 2'
 # <<< lsd end <<<
 
-alias code="fleet"
-alias zshconfig="fleet ~/.zshrc"
+alias zshconfig="code ~/.zshrc"
 alias zshup="source ~/.zshrc"
 
 # tmuxinator 相关的别名

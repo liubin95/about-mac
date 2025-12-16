@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl -n $2 --tail 100 logs -f $1 | tspin
+stern -n $2 --tail 100 -l $1 | tspin
