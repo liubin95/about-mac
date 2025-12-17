@@ -95,6 +95,15 @@ rule-providers:
     interval: 86400
 
 rules:
+ - DOMAIN-SUFFIX,claude.ai,AI
+- DOMAIN-SUFFIX,claude.com,AI
+- DOMAIN-SUFFIX,openai.com,AI
+- DOMAIN-SUFFIX,chatgpt.com,AI
+- DOMAIN-SUFFIX,perplexity.ai,AI
+- DOMAIN-SUFFIX,sora.com,AI
+- DOMAIN,gemini.google.com,AI
+- DOMAIN-SUFFIX,withgoogle.com,AI
+
 - RULE-SET,applications,DIRECT
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
@@ -116,14 +125,5 @@ rules:
 - DOMAIN-SUFFIX,hf-mirror.com,DIRECT
 - DOMAIN-SUFFIX,zf.link,DIRECT
 - DOMAIN-SUFFIX,alphabets.cn,DIRECT
-
-- DOMAIN-SUFFIX,claude.ai,AI
-- DOMAIN-SUFFIX,claude.com,AI
-- DOMAIN-SUFFIX,openai.com,AI
-- DOMAIN-SUFFIX,chatgpt.com,AI
-- DOMAIN-SUFFIX,perplexity.ai,AI
-- DOMAIN-SUFFIX,sora.com,AI
-- DOMAIN,gemini.google.com,AI
-- DOMAIN-SUFFIX,withgoogle.com,AI
 
 - MATCH,自动选择
