@@ -118,5 +118,7 @@ zsh-users/zsh-autosuggestions kind:defer
 $HOME/custom/completions/_podman kind:defer
 $HOME/custom/completions/_podman_compose kind:defer
 $HOME/custom/completions/_minikube kind:defer
+# https://github.com/g-plane/pnpm-shell-completion
+$HOME/custom/completions/pnpm-shell-completion kind:defer
 zsh-users/zsh-completions path:src kind:fpath
 liubin95/zsh-plugins path:ksw/_ksw
