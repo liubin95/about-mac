@@ -50,7 +50,7 @@
 - ~~[zplug zsh 插件管理](https://github.com/zplug/zplug)~~
 - ~~[zplug 使用](https://www.jkg.tw/p2965/)~~
 - [zsh插件管理 antidote](https://github.com/mattmc3/antidote)
-- [命令历史记录 atuin](https://github.com/ellie/atuin)
+- [命令历史记录 atuin](https://github.com/atuinsh/atuin)
 - [lsd 功能强大的ls](https://github.com/lsd-rs/lsd)
 - [tailspin 日志查看工具](https://github.com/bensadeh/tailspin)
 - [mac 上的命令行](https://git.herrbischoff.com/awesome-macos-command-line/about/)
