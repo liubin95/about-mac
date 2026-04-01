@@ -27,8 +27,8 @@ export HF_ENDPOINT=https://hf-mirror.com
 export EXTRA_NODE_PRE_GYP_FLAGS=""
 export PUPPETEER_SKIP_DOWNLOAD="true"
 # ksw 的环境变量
- export KSW_ENVIRONMENTS="dev prd minikube heytea jichacha lima"
-export KSW_ENVIRONMENTS_PRD="prd heytea"
+export KSW_ENVIRONMENTS="dev prd minikube heytea mingji"
+export KSW_ENVIRONMENTS_PRD="prd heytea mingji"
 # tldr 的设置
 alias cman="tldr"
 
@@ -36,7 +36,7 @@ alias cman="tldr"
 export LANG=zh_CN.UTF-8
 
 # Preferred editor for local and remote sessions
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # where proxy
 export PROXY_PORT=7890
@@ -90,7 +90,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # bat start [op]
 command -v bat >/dev/null \
-  && alias cat='bat'
+  && alias cat='bat --decorations=never --paging=never'
 # bat end
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -149,3 +149,9 @@ esac
 . "$HOME/.local/bin/env"
 eval "$(uv generate-shell-completion zsh)"
 # uv end
+
+cdgr() {
+  local root
+  root=$(git rev-parse --show-toplevel 2>/dev/null) || { echo "不在 git 仓库中"; return 1; }
+  cd "$root"
+}
