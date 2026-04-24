@@ -1,11 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # >>> antidote start 2024年7月19日 >>> [op]
 # Source zstyles you might use with antidote.
 [[ -e ${HOME}/.zstyles ]] \
@@ -27,6 +19,7 @@ export HF_ENDPOINT=https://hf-mirror.com
 export EXTRA_NODE_PRE_GYP_FLAGS=""
 export PUPPETEER_SKIP_DOWNLOAD="true"
 # ksw 的环境变量
+export KUBECONFIG="$HOME/.kube/admin.conf-dev.yaml"
 export KSW_ENVIRONMENTS="dev prd minikube heytea mingji"
 export KSW_ENVIRONMENTS_PRD="prd heytea mingji"
 # tldr 的设置
@@ -37,6 +30,8 @@ export LANG=zh_CN.UTF-8
 
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
+export K9S_EDITOR='nvim'
+alias vim='nvim'
 
 # where proxy
 export PROXY_PORT=7890
@@ -93,10 +88,6 @@ command -v bat >/dev/null \
   && alias cat='bat --decorations=never --paging=never'
 # bat end
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] \
-  || source ~/.p10k.zsh
-
 # atuin
 command -v atuin >/dev/null \
   && eval "$(atuin init zsh)"
@@ -133,8 +124,6 @@ alias km='kubectl -n monitor'
 # completion
 command -v kubectl >/dev/null \
   && source <(kubectl completion zsh)
-command -v flux >/dev/null \
-  && source <(flux completion zsh)
 # k8s config end
 
 # pnpm
@@ -155,3 +144,6 @@ cdgr() {
   root=$(git rev-parse --show-toplevel 2>/dev/null) || { echo "不在 git 仓库中"; return 1; }
   cd "$root"
 }
+
+# https://starship.rs/
+eval "$(starship init zsh)"

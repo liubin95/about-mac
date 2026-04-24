@@ -23,7 +23,6 @@
 # 假设是 GitHub.com，则可以使用用户/repo 速记。
 #
 ###
-romkatv/powerlevel10k
 mattmc3/zsh-safe-rm
 # 自定义的组件
 # antidote update 会自动更新

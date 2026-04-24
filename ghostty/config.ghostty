@@ -1,0 +1,15 @@
+font-size = 16
+# 微调加粗，比 bold 更自然
+font-thicken = true
+# 主题
+theme = Catppuccin Mocha
+
+# 切分窗口
+keybind = super+shift+t=new_split:right
+# https://ghostty.org/docs/config/reference#shell-integration-features 
+shell-integration-features = no-title
+# tab 切换
+keybind = ctrl+page_up=previous_tab
+keybind = ctrl+page_down=next_tab
+# 光标
+cursor-style = block
