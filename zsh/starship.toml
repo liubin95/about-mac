@@ -19,6 +19,9 @@ style = "bold mauve"
 truncation_length = 4
 style = "bold lavender"
 
+[package]
+disabled = true
+
 [kubernetes]
 disabled = false
 
