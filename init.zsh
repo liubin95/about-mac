@@ -16,12 +16,6 @@ brew install nvim
 # cask
 brew install clash-verge-rev
 
-# 语言版本管理 [op]
-brew install pyenv
-brew install nvm
-brew install rbenv
-brew install ruby-build
-
 # 软连接
 DIR=$(pwd)
 ln -sf "$DIR"/zsh/.zshrc "$HOME"/.zshrc

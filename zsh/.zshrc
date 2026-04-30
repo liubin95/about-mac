@@ -8,6 +8,7 @@ for config_file in \
   "$ZSH_CONFIG_DIR/rc.d/40-languages.zsh" \
   "$ZSH_CONFIG_DIR/rc.d/50-containers-k8s.zsh" \
   "$ZSH_CONFIG_DIR/rc.d/60-functions.zsh" \
+  "$ZSH_CONFIG_DIR/rc.d/70-setopt.zsh" \
   "$ZSH_CONFIG_DIR/rc.d/90-prompt.zsh"
 do
   source "$config_file"

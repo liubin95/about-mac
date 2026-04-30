@@ -26,6 +26,7 @@ alias mux=tmuxinator
 alias y="yarn"
 # python 相关的别名
 alias py="python"
+
 # watch start
 # 通过将 watch 本身别名为 alias watchh='watch ' （带有尾随空格）
 # 然后使用 watchh k ，可以强制当前交互式 shell 展开 k 在传递给 watch 之前。

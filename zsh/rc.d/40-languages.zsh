@@ -7,3 +7,8 @@ export RUBY_BUILD_MIRROR_URL=https://cache.ruby-china.com
 command -v rbenv >/dev/null \
   && eval "$(rbenv init - zsh)"
 # ruby end
+
+# mise
+command -v mise >/dev/null \
+  && eval "$(mise activate zsh)"
+# mise end

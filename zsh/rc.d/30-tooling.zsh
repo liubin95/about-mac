@@ -1,8 +1,3 @@
-# nvm start [op]
-# 移动到zsh_plugins.txt 使用 kind:defer
-export NVM_DIR="$HOME/.nvm"
-# nvm end
-
 # bat start [op]
 command -v bat >/dev/null \
   && alias cat='bat --decorations=never --paging=never'

@@ -3,9 +3,7 @@ export XDG_STATE_HOME=$HOME/.config/state
 export XDG_CONFIG_HOME=$HOME/.config
 # https://hf-mirror.com/
 export HF_ENDPOINT=https://hf-mirror.com
-# hummus 的编译需要设置这个环境变量 [op]
-export EXTRA_NODE_PRE_GYP_FLAGS=""
-export PUPPETEER_SKIP_DOWNLOAD="true"
+
 # ksw 的环境变量
 export KUBECONFIG="$HOME/.kube/admin.conf-dev.yaml"
 export KSW_ENVIRONMENTS="dev prd minikube heytea mingji"
