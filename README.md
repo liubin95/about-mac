@@ -59,6 +59,7 @@
 - [tmux 终端复用](https://github.com/tmux/tmux)
     - [tmux 插件管理](https://github.com/tmux-plugins/tpm)
     - [tmux 窗口管理](https://github.com/tmuxinator/tmuxinator)
+- [mise 管理环境](https://mise.en.dev/)
 
 #### 容器
 
@@ -125,9 +126,11 @@ open -a "Google Chrome.app" http://127.0.0.1:1234
 
 ```shell
 # 保存到剪切板
-base64 info.png | pbcopy
+base64 info.png
+  | pbcopy
 # 输出剪切板
-pbpaste | base64 -d > info.png
+pbpaste
+  | base64 -d >info.png
 ```
 
 ## ai
