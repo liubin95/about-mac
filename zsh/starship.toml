@@ -29,7 +29,7 @@ disabled = false
 disabled = false
 
 [[kubernetes.contexts]]
-context_pattern = ".*@(prd|mingji|heytea)$"
+context_pattern = ".*@(PRD|mingji|heytea)$"
 style = "bold red"
 symbol = "☸ 🔴 "
 

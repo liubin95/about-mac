@@ -12,3 +12,7 @@ command -v atuin >/dev/null \
 command -v uv >/dev/null \
   && eval "$(uv generate-shell-completion zsh)"
 # uv end
+
+# zoxide
+command -v zoxide >/dev/null \
+  && eval "$(zoxide init zsh)"

@@ -6,8 +6,8 @@ theme = Catppuccin Mocha
 
 # 切分窗口
 keybind = super+shift+t=new_split:right
-# https://ghostty.org/docs/config/reference#shell-integration-features 
-shell-integration-features = no-title
+# https://ghostty.org/docs/config/reference#shell-integration-features
+shell-integration-features = no-title,ssh-env,no-ssh-terminfo
 # tab 切换
 keybind = ctrl+page_up=previous_tab
 keybind = ctrl+page_down=next_tab

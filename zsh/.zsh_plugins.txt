@@ -84,7 +84,6 @@ liubin95/zsh-plugins path:proxy
 getantidote/use-omz
 ohmyzsh/ohmyzsh path:lib/clipboard.zsh
 ohmyzsh/ohmyzsh path:plugins/dirhistory
-ohmyzsh/ohmyzsh path:plugins/z
 ohmyzsh/ohmyzsh path:plugins/extract
 
 ### 推迟的插件
