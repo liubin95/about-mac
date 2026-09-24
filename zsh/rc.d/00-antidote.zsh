@@ -6,7 +6,4 @@
 # load antidote
 source $HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh
 antidote load ${HOME}/.zsh_plugins.txt
-# Enable completion.
-autoload -Uz compinit \
-  && compinit
 # <<< antidote end <<<
